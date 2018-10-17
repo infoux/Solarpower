@@ -1059,18 +1059,19 @@ header#m_header {
         input[type="checkbox"] {
             .pointer;
             .mapazero;
-            // .absolute;
+            .absolute;
             .rem(width, 13);
             .rem(height, 13);
-            .rem(margin-left, 50);
-            // .rem(bottom, 100);
-            // .rem(left, 30);
+            left: 50%;
+            .rem(margin-left, -130);
         }
 
         input[type="checkbox"]+label {
             .pointer;
             .top;
-            .rem(margin-left, 5);
+            .absolute;
+            left: 50%;
+            .rem(margin-left, -110);
             .rem(font-size, 12);
         }
 
@@ -1081,7 +1082,7 @@ header#m_header {
             color: @white;
             border-radius: 5px;
             border: none;
-            .rem(margin, 30 auto 0 auto);
+            .rem(margin, 70 auto 0 auto);
             .rem(width, 260);
             .rem(height, 40);
             .rem(font-size, 16);
@@ -1147,7 +1148,7 @@ div.mobile_main {
         }
 
         ul.tab {
-            width: 340px;
+            .rem(width, 280);
             .no-list;
             .mapazero;
             margin: 20px auto 0 auto;
@@ -1266,24 +1267,22 @@ div.popup {
 
                 h3 {
                     .rem(margin, 0 auto);
-                    .rem(width, 100);
-                    .rem(height, 100);
+                    .rem(width, 80);
+                    .rem(height, 80);
                     background: @white;
                     border-radius: 50%;
                     .center;
-                    .rem(padding, 20);
 
                     img {
-                        .rem(width, 55);
-                        .center;
+                        .rem(width, 70);
                     }
                 }
                 
                 p {
-                    .rem(margin-top, 30);
+                    .rem(margin-top, 20);
                     .center;
                     color: @white;
-                    .rem(font-size, 18);
+                    .rem(font-size, 16);
                 }
             }
 
@@ -1297,6 +1296,7 @@ div.popup {
                 left: 50%;
                 .rem(margin-left, -46);
                 .pointer;
+                .rem(font-size, 12);
             }
         }
     }
@@ -1320,7 +1320,7 @@ div.popup {
                     .block;
                     .rem(height, 50);
                     .rem(line-height, 50);
-                    .rem(font-size, 20);
+                    .rem(font-size, 16);
                     .rem(padding-left, 10);
 
                     &.menu_list {
