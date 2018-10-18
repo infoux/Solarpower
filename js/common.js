@@ -56,6 +56,7 @@ $(function() {
         $('body').scrollTop(0);
         $(".popup").css("display", "block");
         $('.popup').css("height", $('div.mobile_main').height());
+        $('.popup').css("width", $('div.mobile_main').width());
     });
 
     $("div.popup .icon-menu").click(function() {
