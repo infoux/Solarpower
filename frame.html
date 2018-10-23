@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/modal.css" rel="stylesheet">
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/ax5core.min.js"></script>
+    <script src="js/ax5mask.min.js"></script>
+    <script src="js/ax5modal.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <h3>발전소 등록</h3><i class="icon-esc" id="modal-close"></i><br>
+
+    <form name="binder-form" id="form1" onsubmit="return false;">
+
+        <div class="col-md-4">
+            <div class="form-group">
+
+                <label>발전소 아이디</label>
+                <input type="text" id="generatorId" name="generatorId" class="form-control" value="">
+                <select name="pdu" val="USS" class=" form-control" require="false"><option value="">선택해주세요</option><option value="USS" selected="">USS</option><option value="MODBUS">MODBUS</option></select>
+
+                <select name="area1" class=" form-control" require="false"><option value="AREA_01">제주시</option><option value="AREA_02">서귀포시</option></select>
+                <select name="area2" class=" form-control" require="false"><option value="">선택해주세요</option><option value="AREA_0101">제주시시내</option></select>
+
+
+                <label>발전소명</label>
+                <input type="text" id="name" name="name" class="form-control">
+
+                <label>사용자 아이디</label>
+                <input type="text" id="id" name="id" class="form-control">
+
+                <label>주소</label>
+                <input type="text" id="addr" name="addr" class="form-control">
+
+                <label>사용여부</label>
+                <select name="useYn" id="useYn" class="form-control">
+                    <option value="Y">사용</option>
+                    <option value="N">안함</option>
+                </select>
+
+                <label>호스트</label>
+                <input type="text" id="host" name="host" class="form-control">
+
+                <label>포트</label>
+                <input type="text" id="port" name="port" class="form-control">
+            </div>
+        </div>
+
+    </form>
+
+    <div style="padding:10px 15px;">
+        <button class="btn btn-default" id="btn_save" name="btn_save">저장</button>
+        <button class="btn btn-default" type="button" id="modal-open">팝업다시열기</button>
+    </div>
+
+</body>
+
+</html>
