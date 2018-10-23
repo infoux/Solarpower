@@ -15,6 +15,114 @@
     <script src="js/ax5modal.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <script type="text/javascript">
+        $(document.body).ready(function() {
+
+
+            $('#btn_save').click(function() {
+
+
+                var p = $("#form1").serialize();
+                $.ajax({
+                    method: "post",
+                    url: '/mng/cm/generator/save.wp',
+                    data: p,
+                    success: function(res) {
+                        console.log(res);
+                        if (res == "OK") {
+                            ax5modal.callback('OK');
+                            ax5modal.close();
+                        }
+
+                    }
+                });
+
+
+            });
+
+            $('#modal-close').click(function() {
+                ax5modal.close()
+            });
+
+            $('#modal-open').click(function() {
+
+
+                ax5modal.open({
+                    width: 800,
+                    height: 300,
+                    iframe: {
+                        method: "get",
+                        url: '/mng/cm/test/pop.wp',
+                    },
+                }, function(d) {
+                    console.log('부모창 index');
+                    console.log('넘어온 값', d);
+                })
+
+
+                $('#modal-close').click(function() {
+                    ax5modal.close()
+                });
+
+            });
+
+
+
+            ajaxLoadSelect({
+                url: '/mng/cm/sucode/tag/codeKsList.wp',
+                params: [{
+                        name: 'sid',
+                        value: 'sb_selectMultiAdmZoneCode'
+                    }, {
+                        name: 'p1',
+                        value: 'PDU'
+                    },
+
+
+                ],
+                selectboxNm: 'pdu'
+            });
+
+
+
+            ajaxLoadSelect({
+                url: '/mng/cm/sucode/tag/codeParentKsList.wp',
+                params: [{
+                        name: 'sid',
+                        value: 'sb_selectMultiAdmZoneCode'
+                    }, {
+                        name: 'p1',
+                        value: 'AREA'
+                    },
+
+
+                ],
+                selectboxNm: 'area1'
+            });
+
+            $('select[name=area1]').change(function() {
+                ajaxLoadSelect({
+                    url: '/mng/cm/sucode/tag/codeParentSubKsList.wp',
+                    params: [{
+                            name: 'p1',
+                            value: 'AREA'
+                        }, {
+                            name: 'p2',
+                            value: $(this).val()
+                        },
+
+                    ],
+                    selectboxNm: 'area2'
+                });
+            });
+
+
+
+
+        });
+    </script>
+
+
 </head>
 
 <body>
