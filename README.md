@@ -1,1 +1,1 @@
-Solarpower
+Solar
