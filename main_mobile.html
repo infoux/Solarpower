@@ -12,8 +12,44 @@
 </head>
 
 <body>
+    <!-- S:header -->
+    <header id="header">
 
-    <div class="mobile_main">
+        <!-- S:navi -->
+        <div class="popup">
+            <div class="m_user_wrap">
+                <div class="m_user">
+                    <i class="icon-menu"></i>
+
+                    <div class="m_user_info">
+                        <p>사용자1입니다</p>
+                    </div>
+
+                    <button class="m_logout_btn">로그아웃</button>
+                </div>
+
+                <div class="m_menu">
+                    <ul class="m_gnb">
+                        <li class="m_gnb_list">
+                            <a href="">부적합보고서 목록</a>
+                            <ul>
+                                <li><a class="menu_list on" href=""><i class="icon-check"></i>진행중</a></li>
+                                <li><a class="menu_list" href=""><i class="icon-check"></i>완료</a></li>
+                                <li><a class="menu_list" href=""><i class="icon-check"></i>반려</a></li>
+                            </ul>
+                        </li>
+                        <li class="m_gnb_list"><a href="">관리자페이지 이동</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E:navi -->
+
+    </header>
+    <!-- E:header -->
+
+    <!-- S:mainContnet -->
+    <div id="content">
         <div class="m_title">
             <i class="icon-menu"></i>
             <h1 class="m_logo">(주)태양광발전 모니터링 시스템</h1>
@@ -100,41 +136,11 @@
                     <td>dafsdfsdf</td>
                 </tr>
             </table>
-        </div>
 
-        <button class="write">작성하기</button>
-
-        <div class="popup">
-            <div class="m_user_wrap">
-                <div class="m_user">
-                    <i class="icon-menu"></i>
-
-                    <div class="m_user_info">
-                        <h3>
-                            <img src="images/user.png" alt="유저이미지">
-                        </h3>
-                        <p>사용자1입니다</p>
-                    </div>
-
-                    <button class="m_logout_btn">로그아웃</button>
-                </div>
-
-                <div class="m_menu">
-                    <ul class="m_gnb">
-                        <li class="m_gnb_list">
-                            <a href="">부적합보고서 목록</a>
-                            <ul>
-                                <li><a class="menu_list on" href=""><i class="icon-check"></i>진행중</a></li>
-                                <li><a class="menu_list" href=""><i class="icon-check"></i>완료</a></li>
-                                <li><a class="menu_list" href=""><i class="icon-check"></i>반려</a></li>
-                            </ul>
-                        </li>
-                        <li class="m_gnb_list"><a href="">관리자페이지 이동</a></li>
-                    </ul>
-                </div>
-            </div>
+            <button class="write">작성하기</button>
         </div>
     </div>
+    <!-- E:mainContent -->
 </body>
 
 </html>

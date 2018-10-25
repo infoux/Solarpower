@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>태양광발전 모니터링 시스템</title>
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+
+<body>
+    <!-- S:header -->
+    <header id="header">
+        <h1 class="logo"><i class="icon-menu"></i><a href="">(주)태양광발전 <span>모니터링 시스템</span></a></h1>
+        <div class="bg_img"></div>
+
+        <!-- S:navi -->
+        <nav id="gnb_bg">
+
+            <div class="user_wrap">
+                <i class="icon-esc"></i>
+
+                <div class="user_info">
+                    <h3></h3>
+                    <p>사용자1입니다</p>
+                </div>
+
+                <button class="logout_btn">로그아웃</button>
+            </div>
+
+            <div class="gnb_wrap">
+                <ul class="gnb">
+                    <li class="menu_title">
+                        <a href="">내정보관리<i class="icon-down-dir"></i></a>
+                        <ul class="menu">
+                            <li><a href="">회원정보 조회</a></li>
+                            <li><a href="">회원정보 수정</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title">
+                        <a href="">발전소관리<i class="icon-down-dir"></i></a>
+                        <ul class="menu">
+                            <li><a href="">발전소 관리</a></li>
+                            <li><a href="">발전소 인버터</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title">
+                        <a href="">발전소 모니터링<i class="icon-down-dir"></i></a>
+                        <ul class="menu">
+                            <li><a href="">전체 발전소</a></li>
+                            <li><a href="">개별 발전소</a></li>
+                            <li><a href="">인버터</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_title">
+                        <a href="">발전소 보고서<i class="icon-down-dir"></i></a>
+                        <ul class="menu">
+                            <li><a href="">전체 발전소</a></li>
+                            <li><a href="">개별 발전소</a></li>
+                            <li><a href="">인버터</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- E:navi -->
+
+    </header>
+    <!-- E:header -->
+
+    <!-- S:mainContent -->
+    <div class="content_wrap">
+        <h4 class="crumb">발전소 보고서<i class="icon-angle-right"></i>
+            <small>전체발전소</small>
+        </h4>
+        <div class="date_wrap">
+            <dl>
+                <dt>검색범위</dt>
+                <dd class="full">
+                    <select name="" id="search">
+                        <option value="">전체지역</option>
+                        <option value="">제주시(전지역)</option>
+                        <option value="">--제주시</option>
+                        <option value="">--구좌읍</option>
+                        <option value="">--애월읍</option>
+                        <option value="">--우도면</option>
+                        <option value="">--조천읍</option>
+                        <option value="">--추자면</option>
+                        <option value="">--한경면</option>
+                        <option value="">--한림읍</option>
+                        <option value="">서귀포시(전지역)</option>
+                        <option value="">--서귀포시</option>
+                        <option value="">--남원읍</option>
+                        <option value="">--대정읍</option>
+                        <option value="">--성산읍</option>
+                        <option value="">--안덕면</option>
+                        <option value="">--표선읍</option>
+                        <option value="">--이어도</option>
+                    </select>
+                </dd>
+                <dd>
+
+                    <input type="radio" name="date" value="일별" id="daily">
+                    <label for="daily">일별</label>
+
+
+                    <input type="radio" name="date" value="일간" id="weekly">
+                    <label for="weekly">일간</label>
+
+                    <input type="radio" name="date" value="월간" id="monthly">
+                    <label for="monthly">월간</label>
+
+                    <input type="radio" name="date" value="년간" id="year">
+                    <label for="year">년간</label>
+
+                </dd>
+                <dd>
+                    <select name="" id="years">
+                        <option value="">2018년</option>
+                    </select>년
+                    <select name="" id="day">
+                        <option value="">1월</option>
+                        <option value="">2월</option>
+                        <option value="">3월</option>
+                        <option value="">4월</option>
+                        <option value="">5월</option>
+                        <option value="">6월</option>
+                        <option value="">7월</option>
+                        <option value="">8월</option>
+                        <option value="">9월</option>
+                        <option value="">10월</option>
+                        <option value="">11월</option>
+                        <option value="">12월</option>
+                    </select>월
+                    <select name="" id="week">
+                        <option value="">1일</option>
+                        <option value="">2일</option>
+                        <option value="">3일</option>
+                        <option value="">4일</option>
+                        <option value="">5일</option>
+                        <option value="">6일</option>
+                        <option value="">7일</option>
+                        <option value="">8일</option>
+                        <option value="">9일</option>
+                        <option value="">10일</option>
+                        <option value="">11일</option>
+                        <option value="">12일</option>
+                        <option value="">13일</option>
+                        <option value="">14일</option>
+                        <option value="">15일</option>
+                        <option value="">16일</option>
+                        <option value="">17일</option>
+                        <option value="">18일</option>
+                        <option value="">19일</option>
+                        <option value="">20일</option>
+                        <option value="">21일</option>
+                        <option value="">22일</option>
+                        <option value="">23일</option>
+                        <option value="">24일</option>
+                        <option value="">25일</option>
+                        <option value="">26일</option>
+                        <option value="">27일</option>
+                        <option value="">28일</option>
+                        <option value="">29일</option>
+                        <option value="">30일</option>
+                        <option value="">31일</option>
+                    </select>일
+                </dd>
+                <dd class="btn">
+                    <button class="search">검색</button>
+                    <button class="exel">보고서(Exel)</button>
+                </dd>
+            </dl>
+        </div>
+
+        <div class="dashboard">
+
+            <div class="grid-line">
+                <div class="grid num01"></div>
+                <div class="grid num01"></div>
+            </div>
+
+            <div class="grid-line">
+                <div class="grid num01"></div>
+                <div class="grid num01"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- E:mainContent -->
+
+    <!-- S:footer -->
+    <footer id="footer">
+        <p class="copyright">©infomind</p>
+    </footer>
+    <!-- E:footer -->
+
+
+
+</body>
+
+</html>
