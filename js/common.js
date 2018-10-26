@@ -2,26 +2,11 @@ $(function() {
 
     $(".gnb .menu").hide();
 
-    $(".gnb .menu").click(function() {
-        $(this).next("ul").slideToggle(300);
+    $(".gnb .menu_title").hover(function() {
+        $(this).children("ul").stop().slideToggle(250);
+    })
 
-        return false;
-    });
-    // var gnb = $('.gnb .menu_title');
-    // var menu = $('.gnb .menu');
 
-    // menu.hide();
-
-    // gnb.on({
-    //     mouseover: function() {
-    //         $(this).find('.menu').stop()
-    //             .slideDown();
-    //     },
-    //     mouseout: function() {
-    //         $(this).find('.menu').stop()
-    //             .slideUp();
-    //     }
-    // });
 
     $(".logo i").click(function() {
         $('body').scrollTop(0);
