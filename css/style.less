@@ -1546,17 +1546,11 @@ div#content {
 }
 
 #form_wrap {
-    width: 100%;
 
-    h3.mobile {
-        background: #f89834;
-    }
-    
     #form1 {
 
         div.grid {
             border: 1px solid #ccc;
-            // border-radius: 5px;
             .rem(height, 150);
 
             @media all and (min-width: 1200px) {
@@ -1564,6 +1558,21 @@ div#content {
 
             }
         }
+    }  
+}
+
+// mobile_modal
+
+header#header {
+
+    h3.mobile {
+        background: #f89834;
+    }
+}
+
+#content {
+    
+    width: 100%;  
         
         div.modal_wrap {
             width: 100%;
@@ -1816,7 +1825,7 @@ div#content {
                 }
             }
         }
-    }
+    
     
     button.mobile {
         background: #f89834;
