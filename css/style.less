@@ -1545,266 +1545,283 @@ div#content {
     }
 }
 
-h3.mobile {
-    background: #f89834;
-}
+#form_wrap {
+    width: 100%;
 
-#form1 {
+    h3.mobile {
+        background: #f89834;
+    }
     
-    div.modal_wrap {
-        width: 100%;
+    #form1 {
 
-        div.info {
+        div.grid {
+            border: 1px solid #ccc;
+            // border-radius: 5px;
+            .rem(height, 150);
+
+            @media all and (min-width: 1200px) {
+                height: 300px;
+
+            }
+        }
+        
+        div.modal_wrap {
             width: 100%;
-
-            h5 {
-                .rem(margin, 10 0 5 0);
-                .rem(font-size, 10);
-
-                @media all and (min-width: 1200px) {
-                    margin: 10px 0;
-                    font-size: 16px;
+    
+            div.info {
+                width: 100%;
+    
+                h5 {
+                    .rem(margin, 10 0 5 0);
+                    .rem(font-size, 10);
+    
+                    @media all and (min-width: 1200px) {
+                        margin: 10px 0;
+                        font-size: 16px;
+                    }
+                }
+    
+                ul {
+                    border: 1px solid #ccc;
+                    .mapazero;
+                    .no-list;
+                    .rem(padding, 10);
+    
+                    @media all and (min-width: 1200px) {
+                        padding: 20px;
+                    }
+    
+                    li {
+                        .relative;
+    
+                        &::after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+    
+                        label {
+                            .block;
+                            .rem(margin-right, 5);
+                            .rem(width, 70);
+                            .rem(font-size, 8);
+    
+                            @media all and (min-width: 1200px) {
+                                float: left;
+                                margin-right: 10px;
+                                width: 100px;
+                                font-size: 14px;
+                            }
+                        }
+    
+                        input {
+                            width: 100%;
+                            .rem(height, 21);
+                            .block;
+                            .rem(font-size, 8);
+                            .rem(padding, 0 5);
+                           
+                            @media all and (min-width: 1200px) {
+                                width: calc(~'100% - 120px');
+                                height: 35px;
+                                font-size: 12px;
+                                padding: 0 10px;
+                            }
+    
+                            &.power {
+                                .remCalc(width, 100% - 18);
+                                display: inline;
+    
+                                @media all and (min-width: 1200px) {
+                                    width: calc(~'100% - 181px');
+                                }
+                            }
+    
+                            &.adress {
+    
+                                @media all and (min-width: 1200px) {
+                                    margin-left: 110px;
+                                }
+                            }
+                        }
+    
+                        button {
+                            .rem(padding, 5 10);
+                            .rem(font-size, 8);
+                            background: #f89834;
+    
+                            @media all and (min-width: 1200px) {
+                                padding: 9px 16px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
                 }
             }
-
-            ul {
-                border: 1px solid #ccc;
-                .mapazero;
-                .no-list;
-                .rem(padding, 10);
-
-                @media all and (min-width: 1200px) {
-                    padding: 20px;
-                }
-
-                li {
-                    .relative;
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        clear: both;
+    
+            div.problem {
+    
+    
+                h5 {
+                    .rem(margin, 15 0 5 0);
+                    .rem(font-size, 10);
+    
+                    @media all and (min-width: 1200px) {
+                        margin: 20px 0 10px 0;
+                        font-size: 16px;
                     }
-
-                    label {
-                        .block;
-                        .rem(margin-right, 5);
-                        .rem(width, 70);
-                        .rem(font-size, 8);
-
-                        @media all and (min-width: 1200px) {
+                }
+                
+                ul {
+                    border: 1px solid #ccc;
+                    .mapazero;
+                    .no-list;
+                    .rem(padding, 10);
+    
+                    @media all and (min-width: 1200px) {
+                        padding: 20px;
+                    }
+    
+                    li {
+    
+                        &::after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+    
+                        label {
                             float: left;
-                            margin-right: 10px;
-                            width: 100px;
-                            font-size: 14px;
-                        }
-                    }
-
-                    input {
-                        width: 100%;
-                        .rem(height, 21);
-                        .block;
-                        .rem(font-size, 8);
-                        .rem(padding, 0 5);
-                       
-                        @media all and (min-width: 1200px) {
-                            width: calc(~'100% - 120px');
-                            height: 35px;
-                            font-size: 12px;
-                            padding: 0 10px;
-                        }
-
-                        &.power {
-                            .remCalc(width, 100% - 18);
-                            display: inline;
-
+                            .rem(margin-right, 5);
+                            .rem(width, 70);
+                            .rem(font-size, 8);
+    
                             @media all and (min-width: 1200px) {
-                                width: calc(~'100% - 181px');
+                                margin-right: 10px;
+                                width: 100px;
+                                font-size: 14px;
                             }
                         }
-
-                        &.adress {
-
+    
+                        input {
+                            width: 100%;
+                            .rem(height, 21);
+                            .block;
+                            .rem(font-size, 8);
+                            .rem(padding, 0 5);
+                           
                             @media all and (min-width: 1200px) {
-                                margin-left: 110px;
+                                width: calc(~'100% - 120px');
+                                height: 35px;
+                                font-size: 12px;
+                                padding: 0 10px;
+                            }
+                        }
+    
+                        textarea {
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            width: 100%;
+    
+                            @media all and (min-width: 1200px) {
+                                width: calc(~'100% - 120px');
                             }
                         }
                     }
-
-                    button {
-                        .rem(padding, 5 10);
-                        .rem(font-size, 8);
-                        background: #f89834;
-
-                        @media all and (min-width: 1200px) {
-                            padding: 9px 16px;
-                            font-size: 12px;
-                        }
-                    }
                 }
             }
-        }
-
-        div.problem {
-
-
-            h5 {
-                .rem(margin, 15 0 5 0);
-                .rem(font-size, 10);
-
-                @media all and (min-width: 1200px) {
-                    margin: 20px 0 10px 0;
-                    font-size: 16px;
-                }
-            }
-            
-            ul {
-                border: 1px solid #ccc;
-                .mapazero;
-                .no-list;
-                .rem(padding, 10);
-
-                @media all and (min-width: 1200px) {
-                    padding: 20px;
-                }
-
-                li {
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        clear: both;
-                    }
-
-                    label {
-                        float: left;
-                        .rem(margin-right, 5);
-                        .rem(width, 70);
-                        .rem(font-size, 8);
-
-                        @media all and (min-width: 1200px) {
-                            margin-right: 10px;
-                            width: 100px;
-                            font-size: 14px;
-                        }
-                    }
-
-                    input {
-                        width: 100%;
-                        .rem(height, 21);
-                        .block;
-                        .rem(font-size, 8);
-                        .rem(padding, 0 5);
-                       
-                        @media all and (min-width: 1200px) {
-                            width: calc(~'100% - 120px');
-                            height: 35px;
-                            font-size: 12px;
-                            padding: 0 10px;
-                        }
-                    }
-
-                    textarea {
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        width: 100%;
-
-                        @media all and (min-width: 1200px) {
-                            width: calc(~'100% - 120px');
-                        }
+    
+            div.repair {
+                h5 {
+                    .rem(margin, 15 0 5 0);
+                    .rem(font-size, 10);
+    
+                    @media all and (min-width: 1200px) {
+                        margin: 20px 0 10px 0;
+                        font-size: 16px;
                     }
                 }
-            }
-        }
-
-        div.repair {
-            h5 {
-                .rem(margin, 15 0 5 0);
-                .rem(font-size, 10);
-
-                @media all and (min-width: 1200px) {
-                    margin: 20px 0 10px 0;
-                    font-size: 16px;
-                }
-            }
-            
-            ul {
-                border: 1px solid #ccc;
-                .mapazero;
-                .no-list;
-                .rem(padding, 10);
-
-                @media all and (min-width: 1200px) {
-                    padding: 20px;
-                }
-
-                li {
-
-                    &::after {
-                        content: '';
-                        display: block;
-                        clear: both;
+                
+                ul {
+                    border: 1px solid #ccc;
+                    .mapazero;
+                    .no-list;
+                    .rem(padding, 10);
+    
+                    @media all and (min-width: 1200px) {
+                        padding: 20px;
                     }
-
-                    label {
-                        float: left;
-                        .rem(margin-right, 5);
-                        .rem(width, 70);
-                        .rem(font-size, 8);
-
-                        @media all and (min-width: 1200px) {
-                            margin-right: 10px;
-                            width: 100px;
-                            font-size: 14px;
+    
+                    li {
+    
+                        &::after {
+                            content: '';
+                            display: block;
+                            clear: both;
                         }
-                    }
-
-                    input {
-                        width: 100%;
-                        .rem(height, 21);
-                        .block;
-                        .rem(font-size, 8);
-                        .rem(padding, 0 5);
-                       
-                        @media all and (min-width: 1200px) {
-                            width: calc(~'100% - 120px');
-                            height: 35px;
-                            font-size: 12px;
-                            padding: 0 10px;
+    
+                        label {
+                            float: left;
+                            .rem(margin-right, 5);
+                            .rem(width, 70);
+                            .rem(font-size, 8);
+    
+                            @media all and (min-width: 1200px) {
+                                margin-right: 10px;
+                                width: 100px;
+                                font-size: 14px;
+                            }
                         }
-                    }
-
-                    select {
-                        width: 100%;
-                        .rem(height, 21);
-                        .rem(font-size, 8);
-                        .rem(padding, 0 5);
-                       
-
-                        @media all and (min-width: 1200px) {
-                            width: calc(~'100% - 120px');
-                            height: 35px;
-                            font-size: 12px;
-                            padding: 0 10px;
+    
+                        input {
+                            width: 100%;
+                            .rem(height, 21);
+                            .block;
+                            .rem(font-size, 8);
+                            .rem(padding, 0 5);
+                           
+                            @media all and (min-width: 1200px) {
+                                width: calc(~'100% - 120px');
+                                height: 35px;
+                                font-size: 12px;
+                                padding: 0 10px;
+                            }
                         }
-                    }
-
-                    textarea {
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        width: 100%;
-
-                        @media all and (min-width: 1200px) {
-                            width: calc(~'100% - 120px');
+    
+                        select {
+                            width: 100%;
+                            .rem(height, 21);
+                            .rem(font-size, 8);
+                            .rem(padding, 0 5);
+                           
+    
+                            @media all and (min-width: 1200px) {
+                                width: calc(~'100% - 120px');
+                                height: 35px;
+                                font-size: 12px;
+                                padding: 0 10px;
+                            }
+                        }
+    
+                        textarea {
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            width: 100%;
+    
+                            @media all and (min-width: 1200px) {
+                                width: calc(~'100% - 120px');
+                            }
                         }
                     }
                 }
             }
         }
     }
+    
+    button.mobile {
+        background: #f89834;
+    }
 }
 
-button.mobile {
-    background: #f89834;
-}
+
 
