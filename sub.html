@@ -7,8 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>태양광발전 모니터링 시스템</title>
     <link href="css/style.css" rel="stylesheet">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
     <script src="js/jquery-3.1.1.js"></script>
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
     <script src="js/common.js"></script>
 
 </head>
@@ -26,7 +36,6 @@
                 <i class="icon-esc"></i>
 
                 <div class="user_info">
-                    <h3></h3>
                     <p>사용자1입니다</p>
                 </div>
 
@@ -103,8 +112,7 @@
                         <option value="">--이어도</option>
                     </select>
                 </dd>
-                <dd>
-
+                <dd class="check_date">
                     <input type="radio" name="date" value="일별" id="daily">
                     <label for="daily">일별</label>
 
@@ -114,80 +122,98 @@
 
                     <input type="radio" name="date" value="월간" id="monthly">
                     <label for="monthly">월간</label>
+                </dd>
 
-                    <input type="radio" name="date" value="년간" id="year">
-                    <label for="year">년간</label>
+                <dd class="date">
+                    <input type="text">
+                </dd>
 
-                </dd>
-                <dd>
-                    <select name="" id="years">
-                        <option value="">2018년</option>
-                    </select>년
-                    <select name="" id="day">
-                        <option value="">1월</option>
-                        <option value="">2월</option>
-                        <option value="">3월</option>
-                        <option value="">4월</option>
-                        <option value="">5월</option>
-                        <option value="">6월</option>
-                        <option value="">7월</option>
-                        <option value="">8월</option>
-                        <option value="">9월</option>
-                        <option value="">10월</option>
-                        <option value="">11월</option>
-                        <option value="">12월</option>
-                    </select>월
-                    <select name="" id="week">
-                        <option value="">1일</option>
-                        <option value="">2일</option>
-                        <option value="">3일</option>
-                        <option value="">4일</option>
-                        <option value="">5일</option>
-                        <option value="">6일</option>
-                        <option value="">7일</option>
-                        <option value="">8일</option>
-                        <option value="">9일</option>
-                        <option value="">10일</option>
-                        <option value="">11일</option>
-                        <option value="">12일</option>
-                        <option value="">13일</option>
-                        <option value="">14일</option>
-                        <option value="">15일</option>
-                        <option value="">16일</option>
-                        <option value="">17일</option>
-                        <option value="">18일</option>
-                        <option value="">19일</option>
-                        <option value="">20일</option>
-                        <option value="">21일</option>
-                        <option value="">22일</option>
-                        <option value="">23일</option>
-                        <option value="">24일</option>
-                        <option value="">25일</option>
-                        <option value="">26일</option>
-                        <option value="">27일</option>
-                        <option value="">28일</option>
-                        <option value="">29일</option>
-                        <option value="">30일</option>
-                        <option value="">31일</option>
-                    </select>일
-                </dd>
-                <dd class="btn">
-                    <button class="search">검색</button>
-                    <button class="exel">보고서(Exel)</button>
-                </dd>
+                <button class="search">검색</button>
+
             </dl>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+
+                <table>
+                    <tr>
+                        <th>현재발전량</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="col-sm-3">
+
+                <table>
+                    <tr>
+                        <th>금일발전량</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="col-sm-3">
+
+                <table>
+                    <tr>
+                        <th>금월발전량</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="col-sm-3">
+
+                <table>
+                    <tr>
+                        <th>누적발전량</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
         </div>
 
         <div class="dashboard">
 
-            <div class="grid-line">
-                <div class="grid num01"></div>
-                <div class="grid num01"></div>
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="box"></div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="box"></div>
+                </div>
             </div>
 
-            <div class="grid-line">
-                <div class="grid num01"></div>
-                <div class="grid num01"></div>
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="box"></div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="box"></div>
+                </div>
             </div>
 
         </div>
