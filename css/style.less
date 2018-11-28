@@ -1089,54 +1089,49 @@ body {
 
             div.col-sm-3 {
                 padding: 0;
-                .remCalc(width, 100%/2);
                 float: left;
 
-                @media all and (min-width: 1200px) {
-                    width: calc(~"100%/4");
-
-                    &:first-child {
-                        border-left: none;
-                    }
+                &.wid {
+                    .remCalc(width, 100%/2);
                 }
 
-                table {
+                h3 {
+                    .rem(font-size, 14);
+                    color: @white;
+                    background: #083065;
                     .center;
-                    width: 100%;
-                   
+                    .rem(padding, 25 20);
+                    .bold;
+                    margin: 0;
+                    border-right: 1px solid #fff;
+
+                    &.last {
+                        border-right: none;
+                    }
 
                     @media all and (min-width: 1200px) {
-                        width: 100%;
-                    }
-
-                    th {
-                        .center;
-                        .bold;
-                        .rem(height, 50);
-                        background: #083065;
-                        color: @white;
-                        .rem(font-size, 12);
-                        
-                        @media all and (min-width: 1200px) {
-                            height: 37px;
-                            border-left: 1px solid #fff;
-                            font-size: 14px;
-                        }
-                    }
-
-                    td {
-                        .normal;
-                        .rem(height, 50);
-                        border: 1px solid #ccc;
-                        .rem(font-size, 12);
-
-                        @media all and (min-width: 1200px) {
-                            height: 37px;
-                            font-size: 14px;
-                        }
+                        font-size: 14px;
+                        padding: 20px 40px;
                     }
                 }
-                
+
+                div {
+                    border: 1px solid #ccc;
+                    .rem(padding, 20 0);
+                    .center;
+                    .normal;
+                    color: #333;
+                    border-right: none;
+
+                    &:nth-child(2) {
+                        border-right: 1px solid #ccc;
+                    }
+                 
+                    @media all and (min-width: 1200px) {
+                        font-size: 14px;
+                        padding: 15px 40px;
+                    }
+                }
             }
         }
 
@@ -1155,13 +1150,13 @@ body {
                     .rem(padding, 5);
                     .rem(margin-top, 10);
                     .rem(min-height, 500);
-                    width: 100%;
+                    // width: 100%;
 
                     @media all and (min-width: 1200px) {
                         padding: 8px;
                         font-size: 14px;
                         min-height: 600px;
-                        width: calc(~'100%/2');
+                        // width: calc(~'100%/2');
                         margin-top: 20px;
                     }
 
