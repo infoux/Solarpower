@@ -1,146 +1,358 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>태양광발전 모니터링 시스템(기술자)</title>
-    <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/common.js"></script>
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>태양광발전 모니터링 시스템(기술자)</title>
+        <script src="js/jquery-3.1.1.js"></script>
+        <script src="js/common.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
 
-<body>
-    <!-- S:header -->
-    <header id="header">
+    <body class="main">
+        <!-- S:header -->
+        <header id="header">
+            <h3 class="mobile">태양광발전모니터링</h3>
 
-        <!-- S:navi -->
-        <div class="popup">
-            <div class="m_user_wrap">
-                <div class="m_user">
-                    <i class="icon-menu"></i>
+            <!-- S:navi -->
+            <nav class="mainMenu">
 
-                    <div class="m_user_info">
+                <div class="navWrap">
+                    <div class="user">
                         <p>사용자1입니다</p>
+                        <button class="m_logout_btn">로그아웃</button>
                     </div>
 
-                    <button class="m_logout_btn">로그아웃</button>
-                </div>
-
-                <div class="m_menu">
-                    <ul class="m_gnb">
+                    <ul class="gnb">
                         <li class="m_gnb_list">
-                            <a href="">부적합보고서 목록</a>
+                            <h4>
+                                <a href="#">부적합보고서 목록</a>
+                            </h4>
                             <ul>
-                                <li><a class="menu_list on" href=""><i class="icon-check"></i>진행중</a></li>
-                                <li><a class="menu_list" href=""><i class="icon-check"></i>완료</a></li>
-                                <li><a class="menu_list" href=""><i class="icon-check"></i>반려</a></li>
+                                <li>
+                                    <a class="menu_list on" href="">
+                                        <i class="icon-check"></i>진행중</a>
+                                </li>
+                                <li>
+                                    <a class="menu_list" href="">
+                                        <i class="icon-check"></i>완료</a>
+                                </li>
+                                <li>
+                                    <a class="menu_list" href="">
+                                        <i class="icon-check"></i>반려</a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="m_gnb_list"><a href="">관리자페이지 이동</a></li>
+                        <li class="m_gnb_list">
+                            <h4>
+                                <a href="#">부적합보고서 목록</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <a class="menu_list on" href="">
+                                        <i class="icon-check"></i>진행중</a>
+                                </li>
+                                <li>
+                                    <a class="menu_list" href="">
+                                        <i class="icon-check"></i>완료</a>
+                                </li>
+                                <li>
+                                    <a class="menu_list" href="">
+                                        <i class="icon-check"></i>반려</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
+                    <a class="admin" href="">관리자페이지 이동</a>
+
                 </div>
-            </div>
-        </div>
-        <!-- E:navi -->
 
-    </header>
-    <!-- E:header -->
+                <button class="closeMenu">닫기</button>
+            </nav>
+            <!-- E:navi -->
 
-    <!-- S:mainContnet -->
-    <div id="content">
-        <div class="m_title">
-            <i class="icon-menu"></i>
-            <h1 class="m_logo">(주)태양광발전 모니터링 시스템</h1>
-            <i class="icon-search"></i>
-        </div>
+            <button class="menu">
+                <i class="icon-menu"></i>메뉴열기</button>
 
-        <div class="container">
+        </header>
+        <!-- E:header -->
+
+        <!-- S:mainContnet -->
+        <div id="content">
+
             <h2>부적합보고서</h2>
 
-            <ul class="tab">
-                <li><a href="" class="on">전체글</a><i class="icon-minus"></i></li>
-                <li><a href="">진행중</a><i class="icon-minus"></i></li>
-                <li><a href="">완료</a><i class="icon-minus"></i></li>
-                <li><a href="">반려</a></li>
-            </ul>
+            <fieldset class="sort">
+                <legend class="sr-only">검색필터</legend>
 
-            <table class="table">
-                <tr>
-                    <th>진행중</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>진행중</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>진행중</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>진행중</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>진행중</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>진행중</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>완료</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>완료</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>완료</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>완료</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>완료</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>완료</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>반려</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>반려</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>반려</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>반려</th>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>반려</th>
-                    <td>dafsdfsdf</td>
-                </tr>
-            </table>
+                <div class="line two">
 
-            <button class="write">작성하기</button>
+                    <select name="searchType" id="searchType">
+                        <option value="">발전소명</option>
+                        <option value="">발전소주소</option>
+                        <option value="">인버터명</option>
+                        <option value="">유저아이디</option>
+                    </select>
+
+                    <input type="text">
+                </div>
+
+                <div class="line">
+
+                    <select name="state" id="state">
+                        <option value="">진행상황</option>
+                        <option value="">확인요청</option>
+                        <option value="">최종확인요청</option>
+                        <option value="">완료</option>
+                    </select>
+
+                    <select name="checkCd" id="checkCd">
+                        <option value="">중간승인</option>
+                        <option value="">합격</option>
+                        <option value="">불합격</option>
+                    </select>
+
+                    <select name="fcehckCd" id="fcehckCd">
+                        <option value="">최종승인</option>
+                        <option value="">종결</option>
+                        <option value="">미결</option>
+                    </select>
+                </div>
+
+                <button class="search">검색</button>
+
+            </fieldset>
+
+            <dl class="table">
+                <dt>
+                    <h3>수월봉 발전소</h3>
+                    <p class="address">제주특별자치도 제주시 연오로 109</p>
+                    <p class="id">수리이력아이디
+                        <strong>24</strong>
+                    </p>
+
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <u>인버터명:</u>
+                            <strong>REFUsol</strong>
+                        </li>
+                        <li>
+                            <u>진행상황:</u>
+                            <strong>확인 요청중</strong>
+                        </li>
+                    </ul>
+
+                    <div class="text">
+                        <h4>문제보고</h4>
+                        <p>수정해야 합니다.</p>
+                        <i>문제보고일자 : 2019-01-30 00:00:00.0</i>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <u>수리코드:</u>
+                            <strong>SR</strong>
+                        </li>
+                        <li>
+                            <u>수리일자:</u>
+                            <strong>2019-01-30 00:00:00.0</strong>
+                        </li>
+                        <li>
+                            <u>작성자:</u>
+                            <strong>2019-01-30 00:00:00.0</strong>
+                        </li>
+                    </ul>
+
+                    <div class="text">
+                        <h4>수리보고</h4>
+                        <p>수정했습니다.</p>
+                        <i>수리보고일자 : 2019-01-30 00:00:00.0</i>
+                        <h5>작성자 : ADMIN</h5>
+                    </div>
+
+                    <p class="confirm">
+                        <u>처리확인:</u>
+                        <strong>PASS</strong>
+                        /
+                        <u>최종확인:</u>
+                        <strong>Closing</strong>
+                    </p>
+
+                </dd>
+
+                <dt>
+                    <h3>수월봉 발전소</h3>
+                    <p class="address">제주특별자치도 제주시 연오로 109</p>
+                    <p class="id">수리이력아이디
+                        <strong>24</strong>
+                    </p>
+
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <u>인버터명:</u>
+                            <strong>REFUsol</strong>
+                        </li>
+                        <li>
+                            <u>진행상황:</u>
+                            <strong>확인 요청중</strong>
+                        </li>
+                    </ul>
+
+                    <div class="text">
+                        <h4>문제보고</h4>
+                        <p>수정해야 합니다.</p>
+                        <i>문제보고일자 : 2019-01-30 00:00:00.0</i>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <u>수리코드:</u>
+                            <strong>SR</strong>
+                        </li>
+                        <li>
+                            <u>수리일자:</u>
+                            <strong>2019-01-30 00:00:00.0</strong>
+                        </li>
+                        <li>
+                            <u>작성자:</u>
+                            <strong>2019-01-30 00:00:00.0</strong>
+                        </li>
+                    </ul>
+
+                    <div class="text">
+                        <h4>수리보고</h4>
+                        <p>수정했습니다.</p>
+                        <i>수리보고일자 : 2019-01-30 00:00:00.0</i>
+                        <h5>작성자 : ADMIN</h5>
+                    </div>
+
+                    <p class="confirm">
+                        <u>처리확인:</u>
+                        <strong>PASS</strong>
+                        /
+                        <u>최종확인:</u>
+                        <strong>Closing</strong>
+                    </p>
+
+                </dd>
+
+                <dt>
+                    <h3>수월봉 발전소</h3>
+                    <p class="address">제주특별자치도 제주시 연오로 109</p>
+                    <p class="id">수리이력아이디
+                        <strong>24</strong>
+                    </p>
+
+                </dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <u>인버터명:</u>
+                            <strong>REFUsol</strong>
+                        </li>
+                        <li>
+                            <u>진행상황:</u>
+                            <strong>확인 요청중</strong>
+                        </li>
+                    </ul>
+
+                    <div class="text">
+                        <h4>문제보고</h4>
+                        <p>수정해야 합니다.</p>
+                        <i>문제보고일자 : 2019-01-30 00:00:00.0</i>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <u>수리코드:</u>
+                            <strong>SR</strong>
+                        </li>
+                        <li>
+                            <u>수리일자:</u>
+                            <strong>2019-01-30 00:00:00.0</strong>
+                        </li>
+                        <li>
+                            <u>작성자:</u>
+                            <strong>2019-01-30 00:00:00.0</strong>
+                        </li>
+                    </ul>
+
+                    <div class="text">
+                        <h4>수리보고</h4>
+                        <p>수정했습니다.</p>
+                        <i>수리보고일자 : 2019-01-30 00:00:00.0</i>
+                        <h5>작성자 : ADMIN</h5>
+                    </div>
+
+                    <p class="confirm">
+                        <u>처리확인:</u>
+                        <strong>PASS</strong>
+                        /
+                        <u>최종확인:</u>
+                        <strong>Closing</strong>
+                    </p>
+
+                </dd>
+
+            </dl>
+
+            <article class="pagenation">
+
+                <a
+                    href="?pageIndex=1"
+                    title="게시판의 처음으로 이동"
+                    class="jump"
+                    onclick="linkPage(1);return false; ">처음
+                </a>
+                <a
+                    href="?pageIndex=1"
+                    title="게시판의 이전 페이지로 이동"
+                    class="move"
+                    onclick="linkPage(1);return false; ">이전
+                </a>
+                <strong>1</strong>
+                <a
+                    href="?pageIndex=2"
+                    onclick="linkPage(2);return false; "
+                    title="게시판의 2 페이지로 이동">2</a>
+                <a
+                    href="?pageIndex=3"
+                    onclick="linkPage(3);return false; "
+                    title="게시판의 3 페이지로 이동">3</a>
+                <a
+                    href="?pageIndex=4"
+                    onclick="linkPage(4);return false; "
+                    title="게시판의 4 페이지로 이동">4</a>
+                <a
+                    href="?pageIndex=5"
+                    onclick="linkPage(5);return false; "
+                    title="게시판의 5 페이지로 이동">5</a>
+                <a
+                    href="?pageIndex=11"
+                    title="게시판의 다음 페이지로 이동"
+                    class="move"
+                    onclick="linkPage(11);return false; ">다음
+                </a>
+                <a
+                    href="?pageIndex=14"
+                    title="게시판의 마지막 페이지로 이동"
+                    class="jump"
+                    onclick="linkPage(14);return false; ">맨끝
+                </a>
+
+            </article>
+
+            <div class="btn-set">
+                <button class="btn btn-main">작성하기</button>
+            </div>
         </div>
-    </div>
-    <!-- E:mainContent -->
-</body>
+        <!-- E:mainContent -->
+    </body>
 
 </html>
