@@ -320,6 +320,10 @@ input,
 select,
 textarea {
     .border-radius(0);
+
+    @supports (-webkit-overflow-scrolling: touch) {
+            font-size:16px !important;
+    }
 /*
     @media all and (max-width: 1199px) {
         appearance: none;
@@ -376,6 +380,16 @@ body {
 }
 
 
+
+@supports (-webkit-overflow-scrolling: touch) {
+
+    input,
+    select,
+    textarea {
+        font-size:16px !important;
+    }
+
+}
 /* style */
 
 body {
