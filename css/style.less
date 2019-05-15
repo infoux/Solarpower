@@ -726,6 +726,10 @@ body {
                             }
                         }
 
+                        label {
+                            .rem(font-size, 14);
+                        }
+
                         input[type="file"] {
                             .rem(font-size, 14);
                             .rem(height, 40);
@@ -929,10 +933,12 @@ body {
         }
 
         .ax5modal {
+
             h4 {
                 .left;
                 margin:0;
-                .rem(padding, 20 10);
+                .rem(padding, 0 10);
+                .rem(line-height, 50);
                 background:#0075bc;
                 color:#fff;
             }
@@ -941,6 +947,12 @@ body {
                 .no-list;
                 .left;
                 .mapazero;
+                .absolute;
+                .rem(top, 50);
+                left:0;
+                right:0;
+                bottom:0;
+                overflow-y:scroll;
 
                 li {
                     .rem(padding, 14);
@@ -962,12 +974,18 @@ body {
             }
 
             button.close {
-                background:#0C3553;
+                .absolute;
+                .zero;
+                .rem(right, 0);
+                .rem(top, 10);
+                background:none;
                 border:none;
                 color:#fff;
-                .rem(padding, 10 20);
-                .rem(border-radius, 6);
-                .rem(margin, 20 0 0);
+
+                i {
+                    .rem(font-size, 20);
+                }
+
             }
         }
 
