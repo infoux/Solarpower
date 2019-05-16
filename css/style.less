@@ -841,14 +841,53 @@ body {
                 }
 
                 dd {
+                    .relative;
                     .rem(margin, 0 0 20);
                     .rem(padding, 10);
                     background:@white;
                     .drop-shadow();
 
+                    p.btn-area {
+                        .mapazero;
+                        .relative;
+                        button {
+                            .absolute;
+                            .rem(border-radius, 6);
+                            border:none;
+
+                            &.more {
+                                .rem(top, -22);
+                                .rem(right, 0);
+                                .rem(padding, 4 0);
+                                background:none;
+                                color:#0075bc;
+                                .bold;
+                            }
+
+                            &.step01,
+                            &.step02 {
+                                .rem(top, -50);
+                                .rem(right, 10);
+                                .rem(padding, 4 10);
+                                color:#efefef;
+                                .bold;
+                            }
+
+                            &.step01 {
+                                background:#9933cc;
+                            }
+
+                            &.step02 {
+                                background:#669900;
+                            }
+                        }
+                    }
+
+
                     ul {
                         .no-list;
-                        .mapazero;
+                        margin:0;
+                        .rem(padding, 0 54 0 0);
 
                         li {
                             .inline-block;
@@ -881,6 +920,11 @@ body {
                             font-style:normal;
                             .rem(font-size, 12);
                             color:#0075bc;
+
+                            u {
+                                text-decoration:none;
+                                .block;
+                            }
                         }
 
                         h5 {
