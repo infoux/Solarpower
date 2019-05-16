@@ -686,6 +686,63 @@ body {
                 .rem(margin, 0 0 10);
             }
 
+            div.problem,
+            div.repair {
+
+                h3 {
+                    .relative;
+                    .rem(margin, 0); 
+                    .rem(padding, 10);
+                    background:#0075bc;
+                    color:#fff;
+
+                    button {
+                        .absolute;
+                        right:0;
+                        top:0;
+                        bottom:0;
+                        border:none;
+                        background:rgba(0,0,0,0.2);
+                        color:#fff;
+                        .rem(padding, 0 10);
+                        font-size:0;
+
+                        &::before {
+                            content:"열기";
+                            .rem(font-size, 14);
+                        }
+
+                        i {
+                            .rem(font-size, 14);
+                        }
+                    }
+
+                    &.show {
+                        button {
+                            &::before {
+                                content:"닫기";
+                            }
+                            i {
+                                &::before {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                    }
+
+                }
+                
+
+                h3 + fieldset {
+                    height:0;
+                    overflow:hidden;
+                }
+    
+                h3.show + fieldset {
+                    height:auto;
+                }
+
+            }
 
             fieldset.repareInput {
                 .mapazero;

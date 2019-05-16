@@ -30,4 +30,8 @@ $(function() {
 
     });
 
+    $("#content h3 button").click(function() {
+        $(this).parent().toggleClass("show");
+
+    });
 });
